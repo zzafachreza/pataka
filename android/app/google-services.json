@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "955470692241",
+    "project_id": "pencatatanrujukan",
+    "storage_bucket": "pencatatanrujukan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955470692241:android:c02c26592c99815ffa2430",
+        "android_client_info": {
+          "package_name": "com.aplikasipataka"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955470692241-d5h31kbij4m9h0b41uhp0jme3s8g681b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSjndJ0K14cvkEDtLILuInSvwNsXQo2Pw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955470692241-d5h31kbij4m9h0b41uhp0jme3s8g681b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
