@@ -51,8 +51,7 @@ export default function Login({ navigation }) {
     try {
       GoogleSignin.configure({
         scopes: ['https://www.googleapis.com/auth/spreadsheets'],
-        offlineAccess: false,
-        webClientId: '955470692241-d5h31kbij4m9h0b41uhp0jme3s8g681b.apps.googleusercontent.com', // client ID of type WEB for your server. Required to get the idToken on the user object, and for offline access.
+        webClientId: '955470692241-oghag36mss69lagljugdv8vfj98occ48.apps.googleusercontent.com', // client ID of type WEB for your server. Required to get the idToken on the user object, and for offline access.
       });
 
 

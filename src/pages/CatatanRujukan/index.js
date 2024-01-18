@@ -13,6 +13,7 @@ import {
     statusCodes,
     NativeModuleError,
 } from '@react-native-google-signin/google-signin';
+import { showMessage } from 'react-native-flash-message'
 export default function CatatanRujukan({ navigation }) {
     const [open, setOpen] = useState(false);
 
@@ -56,7 +57,63 @@ export default function CatatanRujukan({ navigation }) {
 
     const cekData = () => {
         console.log(kirim);
-        navigation.navigate('Cek', kirim)
+
+        if (kirim.kode_pasien.length == 0) {
+            showMessage({
+                message: `Maaf kode pasein wajib di isi !`
+            })
+        }
+        else if (kirim.tanggal_rujukan.length == 0) {
+            showMessage({
+                message: `Maaf tanggal rujukan wajib di isi !`
+            })
+        }
+        else if (kirim.nama_petugas.length == 0) {
+            showMessage({
+                message: `Maaf nama petugas wajib di isi !`
+            })
+        }
+        else if (kirim.nama_pasien.length == 0) {
+            showMessage({
+                message: `Maaf nama pasies wajib di isi !`
+            })
+        }
+        else if (kirim.faskes_yang_merujuk.length == 0) {
+            showMessage({
+                message: `Maaf faskes yang dirujuk wajib di isi !`
+            })
+        }
+        else if (kirim.faskes_tujuan_rujukan.length == 0) {
+            showMessage({
+                message: `Maaf faskes tujuan rujukan wajib di isi !`
+            })
+        }
+        else if (kirim.nomor_surat_tugas.length == 0) {
+            showMessage({
+                message: `Maaf nomor surat tugas wajib di isi !`
+            })
+        }
+        else if (kirim.nomor_sppd.length == 0) {
+            showMessage({
+                message: `Maaf nomor sppd wajib di isi !`
+            })
+        }
+        else if (kirim.estimasi_pembiayaan.length == 0) {
+            showMessage({
+                message: `Maaf estimasi pembiayan wajib di isi !`
+            })
+        }
+        else if (kirim.jumlah_klaim.length == 0) {
+            showMessage({
+                message: `Maaf jumlah klaim wajib di isi !`
+            })
+        } else {
+            navigation.navigate('Cek', kirim)
+        }
+
+
+
+
 
 
     }
