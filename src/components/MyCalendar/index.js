@@ -26,30 +26,23 @@ export default function MyCalendar({
 }) {
   return (
     <>
-      <View
+
+      <Text
         style={{
-          flexDirection: 'row',
-          alignItems: 'center',
-          paddingVertical: 0,
-          position: 'relative'
+          fontFamily: fonts.secondary[600],
+          color: colors.black,
+          left: 10,
+          fontSize: MyDimensi / 5,
+          ...styleLabel,
         }}>
-        <Icon type="ionicon" name={iconname} color={iconColor} size={MyDimensi / 4} />
-        <Text
-          style={{
-            fontFamily: fonts.secondary[600],
-            color: textColor,
-            left: 10,
-            fontSize: MyDimensi / 4,
-            ...styleLabel,
-          }}>
-          {label}
-        </Text>
-      </View>
+        {label}
+      </Text>
 
       <View style={{
+        height: 40,
         backgroundColor: colors.white,
         borderWidth: 1,
-        borderRadius: 30,
+        borderRadius: 10,
         marginTop: 5,
         fontFamily: fonts.secondary[600],
         borderColor: colors.primary,
@@ -57,10 +50,10 @@ export default function MyCalendar({
         <Text style={{
           position: 'absolute',
           zIndex: 0,
-          top: 15,
+          top: 10,
           left: 20,
           fontFamily: fonts.secondary[600],
-          fontSize: MyDimensi / 4
+          fontSize: MyDimensi / 5
         }}>{moment(value).format('DD MMMM YYYY')}</Text>
         <DatePicker
 
@@ -81,7 +74,7 @@ export default function MyCalendar({
             },
             dateInput: {
               fontFamily: fonts.secondary[600],
-              fontSize: MyDimensi / 4,
+              fontSize: MyDimensi / 5,
               textAlign: 'left',
               alignItems: 'flex-start',
               opacity: 0,

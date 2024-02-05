@@ -21,40 +21,42 @@ export default function MyPicker({
 }) {
   return (
     <>
-      <View
-        style={{
-          flexDirection: 'row',
-          alignItems: 'center',
-          paddingVertical: 0,
-        }}>
-        <Icon type="ionicon" name={iconname} color={colors.primary} size={MyDimensi / 4} />
+      <View style={{
+        marginVertical: 10,
+        flexDirection: 'row',
+        alignItems: 'center',
+        height: 40,
+        borderWidth: 1,
+        borderRadius: 10,
+        borderColor: colors.primary,
+
+      }}>
         <Text
           style={{
+            flex: 1,
             fontFamily: fonts.secondary[600],
-            color: colors.primary,
-            left: 10,
-            fontSize: MyDimensi / 4,
+            color: colors.black,
+            left: 5,
+            fontSize: MyDimensi / 5,
             ...styleLabel,
           }}>
           {label}
         </Text>
-      </View>
 
-      <View style={{
-        borderWidth: 1,
-        borderColor: colors.primary,
-        backgroundColor: colors.white,
-        borderRadius: 30,
-        marginTop: 5,
-        fontFamily: fonts.secondary[600],
+        <View style={{
+          flex: 1,
+          borderLeftWidth: 1,
+          borderLeftColor: colors.primary,
+          fontFamily: fonts.secondary[600],
 
-      }}>
-        <Picker style={{ height: 48, transform: [{ scale: 0.9 }] }}
-          selectedValue={value} onValueChange={onValueChange}>
-          {data.map(item => {
-            return <Picker.Item textStyle={{ fontSize: MyDimensi / 4 }} value={item.value} label={item.label} />;
-          })}
-        </Picker>
+        }}>
+          <Picker style={{ height: 40, transform: [{ scale: 0.7 }] }}
+            selectedValue={value} onValueChange={onValueChange}>
+            {data.map(item => {
+              return <Picker.Item textStyle={{ fontSize: MyDimensi / 4 }} value={item.value} label={item.label} />;
+            })}
+          </Picker>
+        </View>
       </View>
     </>
   );

@@ -128,7 +128,7 @@ export default function Login({ navigation }) {
 
   return (
 
-    <ScrollView style={{ flex: 1, backgroundColor: colors.background, position: 'relative' }}>
+    <ScrollView style={{ flex: 1, backgroundColor: colors.primary, position: 'relative' }}>
 
 
 
@@ -137,7 +137,7 @@ export default function Login({ navigation }) {
         justifyContent: 'center',
         alignItems: 'center'
       }}>
-        <Animated.Image source={require('../../assets/icon.png')} style={{
+        <Animated.Image source={require('../../assets/logo.png')} style={{
           marginTop: 10,
           width: windowWidth / 1.9,
           height: windowWidth / 1.9,
@@ -156,12 +156,12 @@ export default function Login({ navigation }) {
         <Text style={{
           fontSize: MyDimensi / 2,
           fontFamily: fonts.primary[800],
-          color: colors.black,
+          color: colors.white,
         }}>Selamat Datang</Text>
         <Text style={{
           fontSize: MyDimensi / 4,
           fontFamily: fonts.primary[400],
-          color: colors.black,
+          color: colors.white,
           marginBottom: 10,
         }}>Silahkan login terlebih dahulu</Text>
 
@@ -196,6 +196,9 @@ export default function Login({ navigation }) {
 
 
           <MyButton
+            warna={colors.white}
+            colorText={colors.primary}
+            iconColor={colors.primary}
             onPress={signIn}
             title="Login Dengan Google"
 

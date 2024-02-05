@@ -88,14 +88,18 @@ export default function Daftar({ navigation }) {
         return (
             <View style={{
                 padding: 5,
+                flexDirection: 'row',
+                borderBottomWidth: 1,
+                borderBottomColor: colors.border
             }}>
                 <Text style={{
+                    flex: 1,
                     fontFamily: fonts.secondary[400],
-                    fontSize: MyDimensi / 4
+                    fontSize: MyDimensi / 5
                 }}>{label}</Text>
                 <Text style={{
                     fontFamily: fonts.secondary[600],
-                    fontSize: MyDimensi / 4
+                    fontSize: MyDimensi / 5
                 }}>{value}</Text>
             </View>
         )
@@ -131,7 +135,6 @@ export default function Daftar({ navigation }) {
                 <View style={{
                     flex: 1,
                     paddingRight: 5,
-                    paddingTop: 5,
                 }}>
                     <MyPicker label="pilih kolom" data={[
                         { label: 'Kode Pasien', value: 0 },
@@ -152,7 +155,8 @@ export default function Daftar({ navigation }) {
                 </View>
                 <View style={{
                     flex: 1,
-                    paddingLeft: 5
+                    paddingLeft: 5,
+                    paddingTop: 5,
                 }}>
 
                     <MyInput label="Masukan Kata Kunci" onEndEditing={x => {

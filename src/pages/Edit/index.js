@@ -116,7 +116,7 @@ export default function Edit({ navigation, route }) {
             <ScrollView>
 
                 <View style={{
-                    padding: 10,
+                    padding: 5,
                 }}>
 
                     {/* INPUT KODE SETIAP PASIEN */}
@@ -128,10 +128,10 @@ export default function Edit({ navigation, route }) {
                         })
                     }} label="Kode Pasien" placeholder="Masukan Kode Pasien" />
 
-                    <MyGap jarak={20} />
+                    <MyGap jarak={5} />
 
                     {/* INPUT TANGGAL RUJUKAN*/}
-                    <MyCalendar label="Tanggal Rujukan" value={kirim.tanggal_rujukan} onDateChange={x => {
+                    <MyInput label="Tanggal Rujukan" value={kirim.tanggal_rujukan} onChangeText={x => {
                         setKirim({
                             ...kirim,
                             tanggal_rujukan: x,
@@ -139,7 +139,7 @@ export default function Edit({ navigation, route }) {
                         })
                     }} />
 
-                    <MyGap jarak={20} />
+                    <MyGap jarak={5} />
 
                     {/* INPUT NAMA PETUGAS YANG MERUJUK*/}
                     <MyInput value={kirim.nama_petugas} onChangeText={x => {
@@ -150,7 +150,7 @@ export default function Edit({ navigation, route }) {
                         })
                     }} label="Nama Petugas Yang Merujuk" placeholder="Nama Petugas Yang Merujuk" />
 
-                    <MyGap jarak={20} />
+                    <MyGap jarak={5} />
 
                     {/* INPUT NAMA PASIEN YANG DIRUJUK*/}
                     <MyInput value={kirim.nama_pasien} onChangeText={x => {
@@ -161,7 +161,7 @@ export default function Edit({ navigation, route }) {
                         })
                     }} label="Nama Pasien Yang Dirujuk" placeholder="Nama Pasien Yang Dirujuk" />
 
-                    <MyGap jarak={20} />
+                    <MyGap jarak={5} />
 
                     {/* INPUT NAMA PASIEN YANG DIRUJUK*/}
                     <MyPicker value={kirim.faskes_yang_merujuk} onValueChange={x => {
@@ -262,7 +262,7 @@ export default function Edit({ navigation, route }) {
                     ]} />
 
 
-                    <MyGap jarak={30} />
+                    <MyGap jarak={5} />
 
                     {/* PICKER FASKER TUJUAN RUJUKAN */}
                     <MyPicker value={kirim.faskes_tujuan_rujukan} onValueChange={x => {
@@ -294,7 +294,7 @@ export default function Edit({ navigation, route }) {
                     ]} />
 
 
-                    <MyGap jarak={20} />
+                    <MyGap jarak={5} />
 
                     {/* INPUT NAMA PASIEN YANG DIRUJUK*/}
 
@@ -306,7 +306,7 @@ export default function Edit({ navigation, route }) {
                         })
                     }} label="Nomor Surat Tugas" placeholder="Nomor Surat Tugas" />
 
-                    <MyGap jarak={20} />
+                    <MyGap jarak={5} />
 
                     {/* INPUT NAMA PASIEN YANG DIRUJUK*/}
 
@@ -319,7 +319,7 @@ export default function Edit({ navigation, route }) {
                     }} label="Nomor SPPD" placeholder="Nomor SPPD" />
 
 
-                    <MyGap jarak={20} />
+                    <MyGap jarak={5} />
 
                     {/* INPUT NAMA PASIEN YANG DIRUJUK*/}
 
@@ -332,7 +332,7 @@ export default function Edit({ navigation, route }) {
                     }} label="Estimasi Pembiayaan" keyboardType='number-pad' placeholder="Estimasi Pembiayaan" />
 
 
-                    <MyGap jarak={20} />
+                    <MyGap jarak={5} />
 
                     {/* INPUT NAMA PASIEN YANG DIRUJUK*/}
 
@@ -348,7 +348,7 @@ export default function Edit({ navigation, route }) {
 
                     {/* BUTTON SIMPAN */}
                     <MyButton onPress={cekData} title="Update" Icons="open-outline" />
-                    <MyGap jarak={20} />
+                    <MyGap jarak={5} />
                     <MyButton onPress={clearRow} title="Delete" warna={colors.danger} Icons="trash-outline" />
 
                 </View>

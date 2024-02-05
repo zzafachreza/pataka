@@ -79,7 +79,7 @@ export default function Splash({ navigation }) {
         alignItems: 'center'
       }}>
         <Animated.Image
-          source={require('../../assets/icon2.png')}
+          source={require('../../assets/logo.png')}
           resizeMode="contain"
           style={{
             width: img,

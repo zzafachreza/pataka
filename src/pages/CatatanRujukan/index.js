@@ -58,12 +58,7 @@ export default function CatatanRujukan({ navigation }) {
     const cekData = () => {
         console.log(kirim);
 
-        if (kirim.kode_pasien.length == 0) {
-            showMessage({
-                message: `Maaf kode pasein wajib di isi !`
-            })
-        }
-        else if (kirim.tanggal_rujukan.length == 0) {
+        if (kirim.tanggal_rujukan.length == 0) {
             showMessage({
                 message: `Maaf tanggal rujukan wajib di isi !`
             })
@@ -135,9 +130,9 @@ export default function CatatanRujukan({ navigation }) {
                                     <Image source={{
                                         uri: user.user.photo
                                     }} style={{
-                                        width: 60,
-                                        height: 60,
-                                        borderRadius: 30
+                                        width: 40,
+                                        height: 40,
+                                        borderRadius: 20
                                     }} />
                                 </View>
                                 <View style={{
@@ -146,27 +141,18 @@ export default function CatatanRujukan({ navigation }) {
                                     <Text style={{
                                         fontFamily: fonts.primary[400],
                                         color: "white",
-                                        fontSize: MyDimensi / 4.1,
+                                        fontSize: MyDimensi / 5,
 
                                     }}>
-                                        Selamat Datang, {user.user.name}
+                                        Selamat Datang, {user.user.name.split(" ")[0]}
                                     </Text>
-                                    <Text style={{
-                                        fontFamily: fonts.primary[400],
-                                        color: "white",
-                                        fontSize: MyDimensi / 4.1,
 
-                                    }}>
-                                        {user.user.email}
-                                    </Text>
                                     <Text style={{
                                         fontFamily: fonts.primary[600],
                                         color: "white",
-                                        fontSize: MyDimensi / 4.1,
+                                        fontSize: MyDimensi / 5,
 
-                                    }}>
-                                        Catata Rujukan
-                                    </Text>
+                                    }}>PENCATATAN KLAIM RUJUKAN</Text>
                                 </View>
                             </View>
 
@@ -175,7 +161,7 @@ export default function CatatanRujukan({ navigation }) {
                             <View style={{
                                 padding: 10,
                             }}>
-                                <Icon type='ionicon' name='list-outline' color={colors.white} />
+                                <Icon type='ionicon' size={MyDimensi / 4} name='search-outline' color={colors.white} />
                             </View>
                         </TouchableWithoutFeedback>
                         <TouchableWithoutFeedback onPress={() => {
@@ -209,7 +195,7 @@ export default function CatatanRujukan({ navigation }) {
                             <View style={{
                                 padding: 10,
                             }}>
-                                <Icon type='ionicon' name='log-out-outline' color={colors.white} />
+                                <Icon type='ionicon' size={MyDimensi / 4} name='log-out-outline' color={colors.white} />
                             </View>
                         </TouchableWithoutFeedback>
                     </View>
@@ -222,15 +208,9 @@ export default function CatatanRujukan({ navigation }) {
                         }}>
 
                             {/* INPUT KODE SETIAP PASIEN */}
-                            <MyInput onChangeText={x => {
-                                setKirim({
-                                    ...kirim,
-                                    kode_pasien: x,
 
-                                })
-                            }} label="Kode Pasien" placeholder="Masukan Kode Pasien" />
 
-                            <MyGap jarak={20} />
+                            <MyGap jarak={5} />
 
                             {/* INPUT TANGGAL RUJUKAN*/}
                             <MyCalendar label="Tanggal Rujukan" value={kirim.tanggal_rujukan} onDateChange={x => {
@@ -241,7 +221,7 @@ export default function CatatanRujukan({ navigation }) {
                                 })
                             }} />
 
-                            <MyGap jarak={20} />
+                            <MyGap jarak={5} />
 
                             {/* INPUT NAMA PETUGAS YANG MERUJUK*/}
                             <MyInput onChangeText={x => {
@@ -252,7 +232,7 @@ export default function CatatanRujukan({ navigation }) {
                                 })
                             }} label="Nama Petugas Yang Merujuk" placeholder="Nama Petugas Yang Merujuk" />
 
-                            <MyGap jarak={20} />
+                            <MyGap jarak={5} />
 
                             {/* INPUT NAMA PASIEN YANG DIRUJUK*/}
                             <MyInput onChangeText={x => {
@@ -263,7 +243,7 @@ export default function CatatanRujukan({ navigation }) {
                                 })
                             }} label="Nama Pasien Yang Dirujuk" placeholder="Nama Pasien Yang Dirujuk" />
 
-                            <MyGap jarak={20} />
+                            <MyGap jarak={5} />
 
                             {/* INPUT NAMA PASIEN YANG DIRUJUK*/}
                             <MyPicker onValueChange={x => {
@@ -364,7 +344,7 @@ export default function CatatanRujukan({ navigation }) {
                             ]} />
 
 
-                            <MyGap jarak={30} />
+                            <MyGap jarak={5} />
 
                             {/* PICKER FASKER TUJUAN RUJUKAN */}
                             <MyPicker onValueChange={x => {
@@ -396,7 +376,7 @@ export default function CatatanRujukan({ navigation }) {
                             ]} />
 
 
-                            <MyGap jarak={20} />
+                            <MyGap jarak={5} />
 
                             {/* INPUT NAMA PASIEN YANG DIRUJUK*/}
 
@@ -408,7 +388,7 @@ export default function CatatanRujukan({ navigation }) {
                                 })
                             }} label="Nomor Surat Tugas" placeholder="Nomor Surat Tugas" />
 
-                            <MyGap jarak={20} />
+                            <MyGap jarak={5} />
 
                             {/* INPUT NAMA PASIEN YANG DIRUJUK*/}
 
@@ -421,7 +401,7 @@ export default function CatatanRujukan({ navigation }) {
                             }} label="Nomor SPPD" placeholder="Nomor SPPD" />
 
 
-                            <MyGap jarak={20} />
+                            <MyGap jarak={5} />
 
                             {/* INPUT NAMA PASIEN YANG DIRUJUK*/}
 
@@ -434,7 +414,7 @@ export default function CatatanRujukan({ navigation }) {
                             }} label="Estimasi Pembiayaan" keyboardType='number-pad' placeholder="Estimasi Pembiayaan" />
 
 
-                            <MyGap jarak={20} />
+                            <MyGap jarak={5} />
 
                             {/* INPUT NAMA PASIEN YANG DIRUJUK*/}
 
@@ -446,10 +426,10 @@ export default function CatatanRujukan({ navigation }) {
                                 })
                             }} label="Jumlah Klaim" keyboardType='number-pad' placeholder="Jumlah Klaim" />
 
-                            <MyGap jarak={20} />
+                            <MyGap jarak={10} />
 
                             {/* BUTTON SIMPAN */}
-                            <MyButton onPress={cekData} title="Save" Icons="open-outline" />
+                            <MyButton onPress={cekData} title="Simpan" Icons="open-outline" />
 
 
                         </View>

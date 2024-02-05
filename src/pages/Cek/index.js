@@ -64,7 +64,8 @@ export default function Cek({ navigation, route }) {
         axios.request(config)
             .then((response) => {
                 console.log(JSON.stringify(response.data));
-                Alert.alert(MYAPP, 'Data berhasil di simpan !')
+                Alert.alert(MYAPP, 'Data berhasil di simpan !');
+                navigation.replace("CatatanRujukan")
             })
             .catch((error) => {
                 console.log(error);
@@ -93,11 +94,11 @@ export default function Cek({ navigation, route }) {
             }}>
                 <Text style={{
                     fontFamily: fonts.secondary[400],
-                    fontSize: MyDimensi / 3.5
+                    fontSize: MyDimensi / 5
                 }}>{label}</Text>
                 <Text style={{
                     fontFamily: fonts.secondary[600],
-                    fontSize: MyDimensi / 3
+                    fontSize: MyDimensi / 5
                 }}>{value}</Text>
             </View>
         )
@@ -107,7 +108,7 @@ export default function Cek({ navigation, route }) {
             flex: 1,
             backgroundColor: colors.white,
         }}>
-            <MyHeader judul="Review Hasil Input" onPress={() => navigation.goBack()} />
+            <MyHeader judul="Review Hasil Input" onPress={() => navigation.replace("CatatanRujukan")} />
             <ScrollView style={{
                 flex: 1,
             }}>
@@ -122,7 +123,7 @@ export default function Cek({ navigation, route }) {
                 <ListItem label="Nomor Surat Tugas" value={kirim.nomor_surat_tugas} />
                 <ListItem label="Nomor SPPD" value={kirim.nomor_sppd} />
                 <ListItem label="Estimasi Pembiayaan" value={new Intl.NumberFormat().format(kirim.estimasi_pembiayaan)} />
-                <ListItem label="Jumlah Klaim" value={kirim.jumlah_klaim} />
+                <ListItem label="Jumlah Klaim" value={new Intl.NumberFormat().format(kirim.jumlah_klaim)} />
 
                 <View style={{
                     flexDirection: 'row',

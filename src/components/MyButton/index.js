@@ -28,7 +28,7 @@ export default function MyButton({
 
           marginLeft: kiri ? 5 : 0,
           marginRight: !kiri ? 5 : 0,
-          fontSize: MyDimensi / 4,
+          fontSize: MyDimensi / 5,
           fontFamily: fonts.primary[600],
           // fontWeight: fontWeight,
         }}>
@@ -42,7 +42,7 @@ export default function MyButton({
 const styles = (warna, radius, borderSize, borderColor) =>
   StyleSheet.create({
     btn: {
-      height: 50,
+      height: 40,
       borderRadius: radius,
       justifyContent: 'center',
       alignItems: 'center',
