@@ -42,7 +42,13 @@ export default function Cek({ navigation, route }) {
         const DATA_KIRIM = [];
         console.log(Object.keys(kirim).map((key) => {
 
-            DATA_KIRIM.push(kirim[key])
+            console.log(kirim[key])
+            if (kirim[key].length > 0) {
+                DATA_KIRIM.push(kirim[key])
+            } else {
+                DATA_KIRIM.push('-')
+            }
+
         }));
         console.log(DATA_KIRIM);
 

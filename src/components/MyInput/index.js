@@ -41,7 +41,7 @@ export default function MyInput({
       <Text
         style={{
           flex: 1,
-          marginLeft: 5,
+          // marginLeft: 5,
           marginBottom: 5,
           fontFamily: fonts.secondary[600],
           color: colorIcon,
@@ -71,7 +71,7 @@ export default function MyInput({
           borderRadius: 10,
           borderWidth: 1,
           paddingLeft: 10,
-          height: 40,
+          // height: 40,
           color: textColor,
           fontSize: MyDimensi / 5,
           fontFamily: fonts.primary[400],

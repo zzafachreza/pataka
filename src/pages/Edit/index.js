@@ -43,11 +43,10 @@ export default function Edit({ navigation, route }) {
         nomor_sppd: data[7],
         estimasi_pembiayaan: data[8],
         jumlah_klaim: data[9],
-
     });
 
     useEffect(() => {
-        getTOKEN()
+        getTOKEN();
     }, []);
 
     const clearRow = () => {
